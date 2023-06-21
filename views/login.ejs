@@ -1,14 +1,24 @@
-<h2>Login</h2>
+<%- include ('partials/header.ejs') %>
+<div class="container  mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>Login</h2>
+            <div class="card-body">
+                <form action="/login" method="post">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" required class="form-control">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required class="form-control mt-2">
+                    </div>
+                    <button type="submit" class="btn btn-success mt-2 form-control">Login</button>
+                </form>
+                <a href="/register" class="btn btn-secondary mt-2 form-control">Register</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-<form action="/login" method="post">
-    <div>
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" required>
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
-    </div>
-    <button type="submit">Login</button>
-</form>
-<a href="/register">Register</a>
+<%- include ('partials/footer.ejs') %>
