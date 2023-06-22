@@ -1,5 +1,8 @@
 <%- include ('partials/header.ejs') %>
 <body>
+    <form class="form-control" action="/logout?_method=DELETE" method="post">
+        <button class="btn btn-danger" type="submit">Logout</button>
+    </form>
     <h1>Page index,Welcome <%= name %></h1>
 </body>
 
